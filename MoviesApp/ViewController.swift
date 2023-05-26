@@ -25,11 +25,7 @@ class ViewController: UIViewController {
         let url = "https://api.themoviedb.org/3/movie/popular?api_key=99ca23b404a5dc4fd4a7cbf014a3c618"
         
         client.request(url: url) { (result: MovieResponse) in
-//            for movie in result.results {
-//                print(movie.original_title)
-//                print(movie.overview)
-//                print("\n")
-//            }
+
             DispatchQueue.main.async {
                 self.movies = result.results
                 self.tableView.reloadData()
