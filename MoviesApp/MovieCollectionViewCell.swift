@@ -11,11 +11,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var descriptionMovie: UILabel!
     @IBOutlet weak var imageMovie: UIImageView!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        
-    }
+
     
     func set(urlImage: String) {
         let url = "https://image.tmdb.org/t/p/w400" + urlImage
