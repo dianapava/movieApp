@@ -18,6 +18,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6li-qQ-Zq2">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableFooterView" contentMode="redraw" id="zws-zz-WJD">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="BYZ-38-t0r" id="lzu-aT-NYr"/>
+                                    </connections>
+                                </searchBar>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -30,10 +38,21 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchDisplayController" destination="k4b-Yo-Uw0" id="Dhd-Tw-TJp"/>
+                        <outlet property="searchMovie" destination="zws-zz-WJD" id="sYH-Hs-Mni"/>
                         <outlet property="tableView" destination="6li-qQ-Zq2" id="QFQ-VD-E92"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="k4b-Yo-Uw0">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="dhf-GR-8e7"/>
+                        <outlet property="searchBar" destination="zws-zz-WJD" id="euR-P0-7Zn"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="ORR-9o-beC"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="Tbr-YC-Vgx"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="LK9-WH-7nR"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="102" y="5"/>
         </scene>

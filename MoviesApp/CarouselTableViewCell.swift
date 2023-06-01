@@ -9,6 +9,7 @@ import UIKit
 
 class CarouselTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var sectionTitleLabel: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     let idCollection = "movieCollection"
@@ -20,7 +21,8 @@ class CarouselTableViewCell: UITableViewCell {
         collectionView.delegate = self
     }
 
-    func setModel(movies: [Movie]){
+    func setModel(movies: [Movie], title: String){
+        sectionTitleLabel.text = title
         self.movies = movies
         pageControl.numberOfPages = movies.count
         collectionView.reloadData()
