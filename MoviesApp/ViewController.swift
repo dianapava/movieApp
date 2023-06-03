@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var peliculasFiltradas: [String]!
+    
+    @IBOutlet weak var seachBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     let idTableView = "carouselMovies"
     let client = Client()
@@ -16,6 +19,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         let nib = UINib(nibName: "CarouselTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: idTableView)
+        
+        //Definir el delegado del searchbar
+        seachBar.delegate = self
+        
+        //Definir los delegados de la tabla
         tableView.dataSource = self
         tableView.delegate = self
         callService()
@@ -36,7 +44,24 @@ class ViewController: UIViewController {
         }
     }
 }
+// MARK: - Searchbar Metodos
 
+extension ViewController: UISearchBarDelegate{
+    
+    //identificar cuando el usuario comienza a escribir
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        peliculasFiltradas = []
+        
+        if searchText == "" {
+            peliculasFiltradas =
+        }else{
+            for
+        }
+        // cada que cambie el texto necesito actualizar la tabla 
+    }
+}
+
+// MARK: - UITableview Metodos
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
@@ -56,3 +81,8 @@ extension ViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }
+
+
+
+
+
