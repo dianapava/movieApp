@@ -16,13 +16,17 @@ final class Client {
     
     init() {}
     
-    func request<T: Codable>(url: String, onSuccess: @escaping (T) -> Void, onFailure: @escaping (Error) -> Void ) {
+    func request<T: Codable>(url: String,
+                             headers: [String: String] = [:],
+                             onSuccess: @escaping (T) -> Void,
+                             onFailure: @escaping (Error) -> Void ) {
         guard let url = URL(string: url) else {
             onFailure(ClientError.urlInvalid)
             return
         }
-        let request = URLRequest(url: url)
         
+        var request = URLRequest(url: url)
+        request.allHTTPHeaderFields = headers
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 onFailure(error)
