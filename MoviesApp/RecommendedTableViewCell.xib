@@ -17,39 +17,51 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exorcismo" translatesAutoresizingMaskIntoConstraints="NO" id="Opg-9f-5F2">
-                        <rect key="frame" x="0.0" y="8" width="130" height="184"/>
+                        <rect key="frame" x="0.0" y="8" width="150" height="184"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="130" id="LLd-RK-fbI"/>
+                            <constraint firstAttribute="width" constant="150" id="LLd-RK-fbI"/>
                             <constraint firstAttribute="height" constant="184" id="LSD-64-QjJ"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-HQ-fyh">
-                        <rect key="frame" x="138" y="31" width="264" height="20.333333333333329"/>
+                        <rect key="frame" x="158" y="31" width="244" height="97"/>
                         <constraints>
-                            <constraint firstAttribute="height" priority="999" constant="20.333333333333329" id="rhr-7f-YIw"/>
+                            <constraint firstAttribute="height" priority="999" constant="50" id="rhr-7f-YIw"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypc-EZ-4Nl">
-                        <rect key="frame" x="138" y="59.333333333333329" width="264" height="132.66666666666669"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <rect key="frame" x="258" y="136" width="144" height="56"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="QOo-ax-PYD">
+                        <rect key="frame" x="158" y="139" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="AgZ-EL-HC5"/>
+                            <constraint firstAttribute="width" constant="50" id="p9x-QJ-nKc"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="Ypc-EZ-4Nl" firstAttribute="top" secondItem="QOo-ax-PYD" secondAttribute="bottom" constant="-53" id="FrY-5o-fTr"/>
                     <constraint firstAttribute="bottom" secondItem="Opg-9f-5F2" secondAttribute="bottom" constant="8" id="GT9-un-i3g"/>
+                    <constraint firstItem="QOo-ax-PYD" firstAttribute="top" secondItem="zbs-HQ-fyh" secondAttribute="bottom" constant="11" id="HOu-6Q-hbf"/>
                     <constraint firstAttribute="trailing" secondItem="zbs-HQ-fyh" secondAttribute="trailing" constant="8" id="LH5-4U-sot"/>
-                    <constraint firstItem="Ypc-EZ-4Nl" firstAttribute="leading" secondItem="zbs-HQ-fyh" secondAttribute="leading" id="SHS-xZ-eYm"/>
+                    <constraint firstItem="QOo-ax-PYD" firstAttribute="leading" secondItem="zbs-HQ-fyh" secondAttribute="leading" id="RyA-V7-tJl"/>
+                    <constraint firstItem="Ypc-EZ-4Nl" firstAttribute="leading" secondItem="zbs-HQ-fyh" secondAttribute="leading" constant="100" id="SHS-xZ-eYm"/>
                     <constraint firstItem="Opg-9f-5F2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="TJd-lu-12W"/>
+                    <constraint firstItem="Ypc-EZ-4Nl" firstAttribute="centerY" secondItem="QOo-ax-PYD" secondAttribute="centerY" id="Vha-F6-5eY"/>
                     <constraint firstItem="zbs-HQ-fyh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="Xrb-Rw-hK7"/>
                     <constraint firstItem="zbs-HQ-fyh" firstAttribute="leading" secondItem="Opg-9f-5F2" secondAttribute="trailing" constant="8" id="ZgW-7b-fah"/>
                     <constraint firstItem="Ypc-EZ-4Nl" firstAttribute="trailing" secondItem="zbs-HQ-fyh" secondAttribute="trailing" id="Zlh-0D-iOX"/>
                     <constraint firstItem="Ypc-EZ-4Nl" firstAttribute="top" secondItem="zbs-HQ-fyh" secondAttribute="bottom" constant="8" id="bCd-1S-VcO"/>
                     <constraint firstItem="Opg-9f-5F2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gAG-5B-8iS"/>
+                    <constraint firstItem="Ypc-EZ-4Nl" firstAttribute="leading" secondItem="QOo-ax-PYD" secondAttribute="trailing" constant="50" id="sdv-ha-8d7"/>
                     <constraint firstAttribute="bottom" secondItem="Ypc-EZ-4Nl" secondAttribute="bottom" constant="8" id="tFv-6V-n8D"/>
                 </constraints>
             </tableViewCellContentView>
@@ -58,11 +70,13 @@
                 <outlet property="descriptionMovie" destination="Ypc-EZ-4Nl" id="eTU-zI-sc8"/>
                 <outlet property="imageMovie" destination="Opg-9f-5F2" id="Qcw-zZ-PDA"/>
                 <outlet property="nameMovie" destination="zbs-HQ-fyh" id="oec-4o-2dG"/>
+                <outlet property="scoreImage" destination="QOo-ax-PYD" id="Qce-1i-KFf"/>
             </connections>
-            <point key="canvasLocation" x="-684" y="39"/>
+            <point key="canvasLocation" x="-685.49618320610682" y="38.732394366197184"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="exorcismo" width="728" height="1080"/>
+        <image name="star" width="48" height="48"/>
     </resources>
 </document>

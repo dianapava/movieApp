@@ -16,6 +16,13 @@ struct Movie: Codable {
     let overview: String
     let poster_path: String
     let backdrop_path: String
+    let vote_average: Double
 }
 
+struct SearchReponse: Codable {
+    let results: [SearchMovie]
+}
 
+struct SearchMovie:  Codable {
+    let original_title: String
+}
