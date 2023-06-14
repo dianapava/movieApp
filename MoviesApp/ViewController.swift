@@ -11,8 +11,11 @@ class ViewController: UIViewController {
 
     var peliculasFiltradas: [String]!
     
+   // MARK: - IBOutlets
     @IBOutlet weak var seachBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+   
+    
     let idTableView = "carouselMovies"
     let client = Client()
     var movies: [Movie] = []
@@ -49,19 +52,23 @@ class ViewController: UIViewController {
 extension ViewController: UISearchBarDelegate{
     
     //identificar cuando el usuario comienza a escribir
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         peliculasFiltradas = []
         
-        if searchText == "" {
-            peliculasFiltradas =
-        }else{
-            for
-        }
-        // cada que cambie el texto necesito actualizar la tabla 
+       // if searchText == "" {
+         //   peliculasFiltradas =
+        //}else{
+          //  for
+       // }
+        
+     // cada que cambie el texto necesito actualizar la tabla
+        
     }
 }
 
 // MARK: - UITableview Metodos
+
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
